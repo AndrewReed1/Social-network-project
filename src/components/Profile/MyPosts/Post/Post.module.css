@@ -1,0 +1,10 @@
+.item {
+    color: rgb(23, 140, 226);
+    margin-top: 10px;
+}
+
+.item img {
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+}

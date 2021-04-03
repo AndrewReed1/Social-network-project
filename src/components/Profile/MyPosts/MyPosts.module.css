@@ -1,0 +1,8 @@
+.postsBlock {
+    margin-top: 10px;
+}
+
+.addPost {
+    display: flex;
+    flex-direction: column;
+}
