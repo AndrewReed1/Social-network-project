@@ -1,6 +1,8 @@
 .item {
     color: rgb(23, 140, 226);
     margin-top: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
 }
 
 .item img {
