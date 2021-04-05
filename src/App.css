@@ -1,6 +1,6 @@
 .full-screen {
     width: 100%;
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(237,238,240);
 }
 
 .app-wrapper {
@@ -19,7 +19,7 @@
 
 .content {
     grid-area: c;
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(237,238,240);
     font-size: 14px;
     background-color: white;
     margin-top: 15px;
@@ -28,5 +28,5 @@
 
 .content-wrapper {
     margin: 0 auto;
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(237,238,240);
 }
