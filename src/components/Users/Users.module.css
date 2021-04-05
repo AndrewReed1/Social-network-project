@@ -1,3 +1,13 @@
+.users_wrapper {
+    background-color: white;
+    display: flex;
+    border-radius: 7px;
+}
+.users_inner {
+    background-color: white;
+    margin: 15px 25px;
+}
+
 .photo {
     width: 60px;
     height: 60px;
@@ -6,4 +16,9 @@
 
 .selectedPage {
     font-weight: bold;
+}
+
+.user {
+    padding: 10px 0px;
+    border-bottom: 2px solid rgb(237,238,240);
 }

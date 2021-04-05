@@ -12,14 +12,15 @@ let Users = (props) => {
         pages.push(i);
     };
 
-    return <div>
+    return <div className={s.users_wrapper}>
+        <div className={s.users_inner}>
         <div>
             {pages.map(p => {
                 return <span className={props.currentPage === p && s.selectedPage}
                     onClick={() => { props.onPageChanged(p) }}>{p}</span>
             })}
         </div>
-        {props.users.map(u => <div key={u.id}>
+        {props.users.map(u => <div key={u.id} className={s.user}> 
             <span>
                 <div>
                     <NavLink to={'/profile/' + u.id}>
@@ -48,6 +49,7 @@ let Users = (props) => {
             </span>
         </div>)
         }
+        </div>
     </div>
 }
 
