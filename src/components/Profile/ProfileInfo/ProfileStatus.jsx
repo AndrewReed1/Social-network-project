@@ -17,7 +17,7 @@ class ProfileStatus extends React.Component {
             editMode: false
         })
     }
-
+    
     render() {
         return (
             <div>
