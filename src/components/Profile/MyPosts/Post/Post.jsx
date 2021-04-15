@@ -8,7 +8,7 @@ const Post = (props) => {
         <img src='https://seeklogo.com/images/R/redux-logo-9CA6836C12-seeklogo.com.png'/>
         {props.message}
         </div>
-        <div>
+        <div className={s.likeblock}>
             <span> <i class="far fa-heart"></i> </span>{props.like}
         </div>
     </div>

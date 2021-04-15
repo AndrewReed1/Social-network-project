@@ -1,9 +1,10 @@
 .item {
     color: rgb(23, 140, 226);
     margin: 15px 0px;
+    padding: 10px 15px;
     background-color: rgb(255, 255, 255);
     border-radius: 7px;
-    height: 80px;
+    height: 95px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -13,4 +14,10 @@
     height: 50px;
     width: 50px;
     border-radius: 25px;
+}
+
+.likeblock {
+    margin-top: 5px;
+    padding-top: 7px;
+    border-top: 2px solid rgb(237,238,240);
 }
