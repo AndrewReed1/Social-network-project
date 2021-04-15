@@ -16,8 +16,8 @@ const App = () => {
     <BrowserRouter>
       <div className='full-screen'>
         <div className='app-wrapper'>
-          <HeaderContainer />
-          <Nav />
+          <HeaderContainer/>
+          <Nav/>
           <div className='content'>
             <div className='content-wrapper'>
               <Route path='/profile/:userId?' render={() => <ProfileContainer />} />

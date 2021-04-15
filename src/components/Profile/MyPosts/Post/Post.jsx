@@ -1,11 +1,12 @@
 import React from 'react';
 import s from './Post.module.css';
+import userPhoto from '../../../../assets/img/user-logo.png';
 
 const Post = (props) => {
     return (
     <div className={s.item}>
         <div>
-        <img src='https://seeklogo.com/images/R/redux-logo-9CA6836C12-seeklogo.com.png'/>
+        <img src={userPhoto}/>
         {props.message}
         </div>
         <div className={s.likeblock}>
