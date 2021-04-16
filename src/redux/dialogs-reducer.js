@@ -13,8 +13,7 @@ let initialState = {
         {id: 1, message: 'Hi!'},
         {id: 2, message: 'How is your IT-KAMASUTRA?'},
         {id: 3, message: 'YO!'}
-    ],
-    newMessageBody: ''
+    ]
 };
 
 const dialogsReducer = (state = initialState, action) => {
@@ -25,10 +24,9 @@ switch (action.type) {
             newMessageBody: action.body
         };
     case SEND_MESSAGE:
-        let body = state.newMessageBody;
+        let body = action.newMessageBody;
         return {
             ...state,
-            newMessageBody: '',
             messages: [...state.messages, {id: 4, message: body}]
         };
     default: return state;

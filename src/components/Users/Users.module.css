@@ -22,3 +22,14 @@
     padding: 10px 0px;
     border-bottom: 2px solid rgb(237,238,240);
 }
+
+.numbers_inner {
+    display: flex;
+}
+
+.numbers {
+    margin-right: 8px;
+    border: 1px solid rgb(237,238,240);
+    padding: 3px 6px;
+    border-radius: 30px;
+}
