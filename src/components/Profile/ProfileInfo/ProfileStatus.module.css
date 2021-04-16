@@ -5,7 +5,7 @@
 }
 
 .span:hover {
-    background-color: rgb(237,238,240);
+    background-color: rgb(237,238,240, 0.5);
 }
 
 .input {
