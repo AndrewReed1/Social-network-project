@@ -25,14 +25,15 @@
 
 .button {
     border: none;
-    padding: 10px 30px;
+    padding: 8px 30px;
     border-radius: 5px;
-    color: rgb(106,121,141);
-    background-color: rgb(226,233,238);
+    color: rgb(59, 59, 59);
+    background-color: rgb(228, 228, 228);
     outline: none;
+    font-family: 'Zen Dots', cursive;
 }
 
 .button:hover {
-    color: rgb(7, 21, 39);
-    background-color: rgb(216, 216, 216);
+    color: rgb(0, 0, 0);
+    background-color: rgb(201, 201, 201);
 }

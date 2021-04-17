@@ -35,3 +35,17 @@
 .loginBlock a:hover {
     color: red;
 }
+
+.button {
+    border: none;
+    padding: 8px 30px;
+    border-radius: 5px;
+    background-color: rgb(201, 201, 201);
+    outline: none;
+    font-family: 'Zen Dots', cursive;
+}
+
+.button:hover {
+    color: rgb(255, 0, 0);
+    background-color: rgb(175, 175, 175);
+}

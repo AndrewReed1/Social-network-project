@@ -6,3 +6,21 @@
 .formControl.error span {
     color: red;
 }
+
+.text {
+    outline: none;
+    font-family: 'Zen Dots', cursive;
+}
+
+.text:hover {
+    background-color: rgb(237,238,240, 0.5);
+}
+
+.input {
+    padding: 5px 0px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Zen Dots', cursive;
+    font-size: 11px;
+}
