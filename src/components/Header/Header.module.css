@@ -11,7 +11,10 @@
     display: flex;
     align-items: center;
     margin-left: 10px;
+    color: black;
+    text-decoration: none;
 }
+
 .name {
     margin-left: 10px;
     font-weight: bold;
@@ -27,11 +30,6 @@
     margin-right: 10px;
 }
 
-.loginBlock a {
-    color: black;
-    text-decoration: none;
-}
-
 .loginBlock a:hover {
     color: red;
 }
@@ -43,6 +41,8 @@
     background-color: rgb(201, 201, 201);
     outline: none;
     font-family: 'Zen Dots', cursive;
+    text-decoration: none;
+    color: black;
 }
 
 .button:hover {

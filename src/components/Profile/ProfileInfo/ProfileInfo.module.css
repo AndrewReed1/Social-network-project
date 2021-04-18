@@ -12,6 +12,7 @@
 .person_discription {
     margin-left: 15px;
     width: 76%;
+    margin-top: 20px;
 }
 
 .profile_img {
@@ -21,4 +22,9 @@
 
 .discription {
     margin-top: 10px;
+}
+
+.userName {
+    font-weight: bold;
+    font-size: 20px;
 }

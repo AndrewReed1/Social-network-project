@@ -6,6 +6,8 @@ import { Input } from '../common/FormControllers/FormControllers';
 import s from './Login.module.css';
 import { login, logout } from '../../redux/auth-reducer';
 import { Redirect } from 'react-router';
+import style from '../../components/common/FormControllers/FormControllers.module.css';
+import logo from '../../assets/img/main-logo.png';
 
 let maxLength30 = maxLengthCreator(30);
 
@@ -13,14 +15,15 @@ const LoginForm = (props) => {
     return (
         <form className={s.form} onSubmit={props.handleSubmit}>
             <div>
-                <Field validate={[required, maxLength30]} placeholder={'Email'} name={'email'} component={Input}/>
+                <Field validate={[required, maxLength30]} placeholder={'Email'} name={'email'} component={Input} />
             </div>
             <div>
-                <Field validate={[required, maxLength30]} placeholder={'Password'} name={'password'} component={Input} type={'password'}/>
+                <Field validate={[required, maxLength30]} placeholder={'Password'} name={'password'} component={Input} type={'password'} />
             </div>
             <div>
-                <Field className={s.rememberMe} type={'checkbox'} name={'rememberMe'} component={'input'}/> remember me
-                </div>
+                <Field className={s.rememberMe} type={'checkbox'} name={'rememberMe'} component={'input'} /> remember me
+            </div>
+                {props.error ? <div className={style.form_summery_error}>{props.error}</div>: ''}
             <div>
                 <button className={s.button}>Login</button>
             </div>
@@ -41,8 +44,9 @@ const Login = (props) => {
 
     return (
         <div className={s.login_wrapper}>
+            <div className={s.greeting}>Welcome to <b>BootCamp</b> SocialNetwork!</div>
             <h1>Login</h1>
-            <LoginReduxForm onSubmit={onSubmit}/>
+            <LoginReduxForm onSubmit={onSubmit} />
         </div>
     )
 }

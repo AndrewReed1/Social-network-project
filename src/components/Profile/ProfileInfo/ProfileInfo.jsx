@@ -12,12 +12,15 @@ if (!props.profile) {
     return (
         <div className={s.profileInfoWrapper}>
             <div className={s.discriptionBlock}>
-                <img className={s.profile_img} src={props.profile.photos.large !== null ? props.profile.photos.large: userPhoto} />
+                <div>
+                    <div className={s.userName}>{props.profile.fullName}</div>
+                    <img className={s.profile_img} src={props.profile.photos.large !== null ? props.profile.photos.large : userPhoto} />
+
+                </div>
                 <div className={s.person_discription}>
-                    <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
+                    <ProfileStatus status={props.status} updateStatus={props.updateStatus} />
                     <div className={s.discription}>
-                        <div>{'Name:' + ' '}{props.profile.fullName}</div>
-                        <div>{'Job Status:' + ' '}{props.profile.lookingForAJob ? 'looking for a job': 'not looking for a job'}</div>
+                        <div>{'Job Status:' + ' '}{props.profile.lookingForAJob ? 'looking for a job' : 'not looking for a job'}</div>
                         <div>{'Facebook:' + ' '}{props.profile.contacts.facebook ? props.profile.contacts.facebook : ''}</div>
                         <div>{'GitHub:' + ' '}{props.profile.contacts.github ? props.profile.contacts.github : ''}</div>
                         <div>{'Instagram:' + ' '}{props.profile.contacts.instagram ? props.profile.contacts.instagram : ''}</div>

@@ -5,7 +5,7 @@
 }
 
 .form {
-    height: 150px;
+    padding-bottom: 15px;
 }
 
 .rememberMe {
@@ -24,4 +24,14 @@
 .button:hover {
     color: rgb(255, 0, 0);
     background-color: rgb(175, 175, 175);
+}
+
+.greeting {
+    padding-top: 15px;
+}
+
+.loginWrapper {
+    display: flex;
+    background-color: white;
+    min-height: 150px;
 }

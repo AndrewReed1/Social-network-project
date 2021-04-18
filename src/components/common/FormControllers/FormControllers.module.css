@@ -24,3 +24,8 @@
     font-family: 'Zen Dots', cursive;
     font-size: 11px;
 }
+
+.form_summery_error {
+    border: 1px solid red;
+    color: red;
+}

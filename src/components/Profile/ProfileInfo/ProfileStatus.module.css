@@ -1,6 +1,5 @@
 .span {
     padding: 5px 5px;
-    width: 100%;
     border-radius: 5px;
     background-color: rgb(237,238,240, 0.5);
 }
@@ -21,4 +20,3 @@
 .active {
     background-color: rgb(237,238,240);
 }
-
