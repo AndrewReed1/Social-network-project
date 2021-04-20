@@ -81,10 +81,11 @@ export const toggleIsFeatching = (isFeatching) => ({type: TOGGLE_IS_FEATCHING, i
 export const toggleFollowingProgress = (isFeatching, userId) => ({type: TOGGLE_IS_FOLLOWING_PROGRESS, isFeatching, userId });
 
 // THUNK
-export const getUsers = (currentPage, pageSize) => {
+export const getUsers = (page, pageSize) => {
     return (dispatch) => {
         dispatch(toggleIsFeatching(true));
-        UsersAPI.getUsers(currentPage, pageSize).then(data => {
+        dispatch(setCurrentPage(page));
+        UsersAPI.getUsers(page, pageSize).then(data => {
             dispatch(toggleIsFeatching(false));
             dispatch(setUsers(data.items));
             dispatch(setTotalUsersCount(data.totalCount));

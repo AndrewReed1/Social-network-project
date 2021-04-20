@@ -15,7 +15,6 @@ if (!props.profile) {
                 <div>
                     <div className={s.userName}>{props.profile.fullName}</div>
                     <img className={s.profile_img} src={props.profile.photos.large !== null ? props.profile.photos.large : userPhoto} />
-
                 </div>
                 <div className={s.person_discription}>
                     <ProfileStatus status={props.status} updateStatus={props.updateStatus} />
