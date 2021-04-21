@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route, withRouter } from 'react-router-dom';
 import './App.css';
-import ProfileContainer from './components/Profile/ProfileContainer';
 import Nav from './components/Nav/Nav';
 import News from './components/News/News';
 import Music from './components/Music/Music';
@@ -14,6 +13,7 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { initializeApp } from './redux/app-reducer';
 import Preloader from './components/common/Preloader/Preloader';
+import ProfileHookContainer from './components/Profile/ProfileHookContainer';
 
 class App extends React.Component {
 
@@ -33,7 +33,7 @@ class App extends React.Component {
             <Nav/>
             <div className='content'>
               <div className='content-wrapper'>
-                <Route path='/profile/:userId?' render={() => <ProfileContainer />} />
+                <Route path='/profile/:userId?' render={() => <ProfileHookContainer />} />
                 <Route path='/dialogs' render={() => <DialogsContainer />} />
                 <Route path='/users' render={() => <UsersContainer />} />
                 <Route path='/news' render={() => <News />} />
