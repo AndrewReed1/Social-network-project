@@ -3,7 +3,7 @@
     padding: 10px 15px;
     background-color: rgb(255, 255, 255);
     border-radius: 7px;
-    height: 95px;
+    min-height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

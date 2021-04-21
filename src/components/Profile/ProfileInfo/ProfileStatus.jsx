@@ -1,55 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import s from './ProfileStatus.module.css';
 
-class ProfileStatus extends React.Component {
+const ProfileHooksStatus = (props) => {
 
-    state = {
-        editMode: false,
-        status: this.props.status
-    }
+    let [editMode, setEditMode] = useState(false);
+    let [status, setStatus] = useState(props.status);
 
-    activateEditMode = () => {
-        this.setState({
-            editMode: true
-        })
-    }
-    deactivateEditMode = () => {
-        this.setState({
-            editMode: false
-        })
-        this.props.updateStatus(this.state.status);
-    }
-    onStatusChange = (e) => {
-        this.setState({
-            status: e.currentTarget.value
-        })
+    const activateEditMode = () => {
+        setEditMode(true);
     }
 
-    componentDidUpdate(prevProps, prevState) {
-        if(prevProps.status !== this.props.status) {
-            this.setState({
-                status: this.props.status
-            })
-        }
+    const deactivateEditMode = () => {
+        setEditMode(false);
+        props.updateStatus(status);
     }
 
-    render() {
-        return (
-            <div className={s.span} >
-                {!this.state.editMode &&
-                    <div>
-                        <span className={s.mainSpan} onClick={this.activateEditMode.bind(this)}>{this.props.status || 'изменить статус'}</span>
-                    </div>
-                }
-                {this.state.editMode &&
-                    <div>
-                        <input className={s.input} onChange={this.onStatusChange} autoFocus={true} onBlur={this.deactivateEditMode.bind(this)} value={this.state.status}/>
-                    </div>
-                }
-            </div>
-        )
-
+    const onStatusChange = (e) => {
+        setStatus(e.currentTarget.value)
     }
+
+    return (
+        <div className={s.span} >
+            { !editMode &&
+                <div>
+                    <span onClick={ activateEditMode } className={s.mainSpan}>{props.status || 'изменить статус'}</span>
+                </div>
+            }
+            { editMode &&
+                <div>
+                    <input onChange={onStatusChange} value={status} onBlur={ deactivateEditMode } autoFocus={true} className={s.input}/>
+                </div>
+            }
+        </div>
+    )
 };
 
-export default ProfileStatus;
+export default ProfileHooksStatus;
