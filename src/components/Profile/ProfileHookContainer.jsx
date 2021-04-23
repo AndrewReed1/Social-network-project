@@ -9,7 +9,6 @@ import { compose } from 'redux';
 const ProfileHookContainer = (props) => {
 
     useEffect(() => {
-        console.log('yo!');
         let userId = props.match.params.userId;
         if (!userId) {
             userId = props.authorizedUserId;

@@ -6,6 +6,7 @@ const mapStateToProps = (state) => {
     return {
        posts: state.profilePage.posts,
        newPostText: state.profilePage.newPostText,
+       login: state.auth.login,
        profile: state.profilePage.profile
     }
 };
