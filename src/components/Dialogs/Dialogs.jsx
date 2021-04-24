@@ -9,7 +9,6 @@ import { maxLengthCreator, required } from '../../Validators/Validators';
 
 const Dialogs = (props) => {
     let state = props.dialogsPage;
-
     let dialogsItems = state.dialogs.map( d => <DialogItem name={d.name} key={d.id} id={d.id} /> );
     let messagesItems = state.messages.map( m => <Message message={m.message} key={m.id}/> );
 
@@ -17,7 +16,6 @@ const Dialogs = (props) => {
         props.sendMessage(values.newMessageBody);
     };
 
-// REDIRECT
     if (!props.isAuth) {
         return <Redirect to={'/login'}/>
     }
@@ -33,7 +31,7 @@ const Dialogs = (props) => {
             </div>
         </div>
     )
-}
+};
 
 let maxLength50 = maxLengthCreator(50);
 
@@ -46,7 +44,7 @@ const AddMessageForm = (props) => {
             <div><button className={s.button}>Send</button></div>
         </form>
     )
-}
+};
 
 const AddMessageReduxForm = reduxForm({form: 'dialogAddMessageForm'})(AddMessageForm);
 

@@ -1,26 +1,27 @@
-import {UsersAPI} from '../api/api';
+import { UsersAPI } from '../api/api';
 
-const FOLLOW = 'FOLLOW';
-const UNFOLLOW = 'UNFOLLOW';
-const SET_USERS = 'SET_USERS';
-const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE ';
-const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT';
-const TOGGLE_IS_FEATCHING = 'TOGGLE_IS_FEATCHING';
-const TOGGLE_IS_FOLLOWING_PROGRESS = 'TOGGLE_IS_FOLLOWING_PROGRESS';
+// Constants
+const FOLLOW = 'network/users/FOLLOW';
+const UNFOLLOW = 'network/users/UNFOLLOW';
+const SET_USERS = 'network/users/SET_USERS';
+const SET_CURRENT_PAGE = 'network/users/SET_CURRENT_PAGE ';
+const SET_TOTAL_USERS_COUNT = 'network/users/SET_TOTAL_USERS_COUNT';
+const TOGGLE_IS_FEATCHING = 'network/users/TOGGLE_IS_FEATCHING';
+const TOGGLE_IS_FOLLOWING_PROGRESS = 'network/users/TOGGLE_IS_FOLLOWING_PROGRESS';
 
+// InitialState
 let initialState = {
     users:[ ],
     pageSize: 5,
     totalUsersCount: 80,
     currentPage: 1,
     isFetching: false,
-    followingInProgress: [],
-    fake: 10
+    followingInProgress: []
 };
 
+// usersReducer
 const usersReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'FAKE': return {...state, fake: state.fake + 1}
         case FOLLOW:
             return {
                 ...state,
@@ -71,9 +72,9 @@ const usersReducer = (state = initialState, action) => {
         }
         default: return state;
     }
-}
+};
 
-// AC
+// ActionCreator
 export const followSuccess = (userId) => ({type: FOLLOW, userId});
 export const unfollowSuccess = (userId) => ({type: UNFOLLOW, userId});
 export const setUsers = (users) => ({type: SET_USERS, users});
@@ -82,7 +83,7 @@ export const setTotalUsersCount = (totalUsersCount) => ({type: SET_TOTAL_USERS_C
 export const toggleIsFeatching = (isFeatching) => ({type: TOGGLE_IS_FEATCHING, isFeatching });
 export const toggleFollowingProgress = (isFeatching, userId) => ({type: TOGGLE_IS_FOLLOWING_PROGRESS, isFeatching, userId });
 
-// THUNK
+// Redux-thunk
 export const getUsers = (page, pageSize) => {
     return (dispatch) => {
         dispatch(toggleIsFeatching(true));
@@ -93,7 +94,7 @@ export const getUsers = (page, pageSize) => {
             dispatch(setTotalUsersCount(data.totalCount));
         });
     }
-}
+};
 
 export const follow = (userId) => {
     return (dispatch) => {
@@ -106,7 +107,7 @@ export const follow = (userId) => {
                 dispatch(toggleFollowingProgress(false, userId));
             });
     }
-}
+};
 
 export const unfollow = (userId) => {
     return (dispatch) => {
@@ -119,6 +120,6 @@ export const unfollow = (userId) => {
                 dispatch(toggleFollowingProgress(false, userId));
             });
     }
-}
+};
 
 export default usersReducer;

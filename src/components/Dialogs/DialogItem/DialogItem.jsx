@@ -6,6 +6,6 @@ const DialogItem = (props) => {
     return (
         <div className={s.dialog}><NavLink className={s.link} to={'/dialogs/' + props.id} activeClassName={s.active}>{props.name}</NavLink></div>
     )
-}
+};
 
 export default DialogItem;

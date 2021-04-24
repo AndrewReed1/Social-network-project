@@ -1,13 +1,15 @@
 import { getAuthUserData } from './auth-reducer';
 
-const INITIALIZED_SUCCESS = 'INITIALIZED_SUCCESS';
+// Constants
+const INITIALIZED_SUCCESS = 'network/app/INITIALIZED_SUCCESS';
 
+// InitialState
 let initialState = {
     initialized: false
 };
 
+// appReducer
 const appReducer = (state = initialState, action) => {
-
     switch (action.type) {
         case INITIALIZED_SUCCESS: {
             return {
@@ -17,20 +19,18 @@ const appReducer = (state = initialState, action) => {
         };
         default: return state;
     }
-}
+};
 
-//AC
+// ActionCreator
 export const initializedSuccess = () => ({type: INITIALIZED_SUCCESS});
 
-//THUNK
+// Redux-thunk
 export const initializeApp = () => (dispatch) => {
     let promise = dispatch(getAuthUserData())
-    //dispatch(getAuthUserData());
-    //dispatch(initializedSuccess);
     Promise.all([promise])
-    .then( () => {
-        dispatch(initializedSuccess());
-    });
+        .then(() => {
+            dispatch(initializedSuccess());
+        });
 };
 
 export default appReducer;

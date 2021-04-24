@@ -4,7 +4,6 @@ import s from './Users.module.css';
 import { NavLink } from 'react-router-dom';
 
 let Users = (props) => {
-
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
     let pages = [];
     for (let i = 1; i <= pagesCount; i++) {
@@ -13,12 +12,12 @@ let Users = (props) => {
 
     return <div className={s.users_wrapper}>
         <div className={s.users_inner}>
-        <div className={s.numbers_inner}>
-            {pages.map(p => {
-                return <div className={s.numbers}><span className={props.currentPage === p && s.selectedPage}
+            <div className={s.numbers_inner}>
+                {pages.map(p => {
+                    return <div className={s.numbers}><span className={props.currentPage === p && s.selectedPage}
                     onClick={() => { props.onPageChanged(p) }}>{p}</span></div>
-            })}
-        </div>
+                })}
+            </div>
         {props.users.map(u => <div key={u.id} className={s.user}> 
             <span>
                 <div>
@@ -50,6 +49,6 @@ let Users = (props) => {
         }
         </div>
     </div>
-}
+};
 
 export default Users;

@@ -7,7 +7,6 @@ import s from './Login.module.css';
 import { login, logout } from '../../redux/auth-reducer';
 import { Redirect } from 'react-router';
 import style from '../../components/common/FormControllers/FormControllers.module.css';
-import logo from '../../assets/img/main-logo.png';
 
 let maxLength30 = maxLengthCreator(30);
 
@@ -29,9 +28,9 @@ const LoginForm = (props) => {
             </div>
         </form>
     )
-}
+};
 
-const LoginReduxForm = reduxForm( {form: 'login'} ) (LoginForm)
+const LoginReduxForm = reduxForm( {form: 'login'} ) (LoginForm);
 
 const Login = (props) => {
     const onSubmit = (formData) => {
@@ -53,6 +52,6 @@ const Login = (props) => {
 
 const mapStateToProps = (state) => ({
     isAuth: state.auth.isAuth
-})
+});
 
 export default connect( mapStateToProps, { login, logout } )(Login);

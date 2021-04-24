@@ -6,7 +6,7 @@ const ProfileHooksStatus = (props) => {
     let [editMode, setEditMode] = useState(false);
     let [status, setStatus] = useState(props.status);
 
-    useEffect( () => {
+    useEffect(() => {
         setStatus(props.status);
     }, [props.status] );
 
@@ -25,14 +25,14 @@ const ProfileHooksStatus = (props) => {
 
     return (
         <div className={s.span} >
-            { !editMode &&
+            {!editMode &&
                 <div>
                     <span onClick={ activateEditMode } className={s.mainSpan}>{props.status || 'изменить статус'}</span>
                 </div>
             }
-            { editMode &&
+            {editMode &&
                 <div>
-                    <input onChange={onStatusChange} value={status} onBlur={ deactivateEditMode } autoFocus={true} className={s.input}/>
+                    <input onChange={ onStatusChange } value={status} onBlur={ deactivateEditMode } autoFocus={true} className={s.input}/>
                 </div>
             }
         </div>

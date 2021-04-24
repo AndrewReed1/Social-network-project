@@ -24,7 +24,7 @@ const MyPosts = (props) => {
             </div>
         </div>
     )
-}
+};
 
 const MyPostForm = (props) => {
     return (
@@ -38,7 +38,7 @@ const MyPostForm = (props) => {
             </div>
         </form>
     )
-}
+};
 
 const MyPostReduxForm = reduxForm({form: 'addNewPostForm'})(MyPostForm);
 

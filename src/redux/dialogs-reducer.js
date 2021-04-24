@@ -1,6 +1,8 @@
-const UPDATE_NEW_MESSAGE_BODY = 'UPDATE_NEW_MESSAGE_BODY';
-const SEND_MESSAGE = 'SEND_MESSAGE';
+// Constants
+const UPDATE_NEW_MESSAGE_BODY = 'network/dialogs/UPDATE_NEW_MESSAGE_BODY';
+const SEND_MESSAGE = 'network/dialogs/SEND_MESSAGE';
 
+// InitialState
 let initialState = {
     dialogs: [
         {id: 1, name: 'Dima'},
@@ -16,6 +18,7 @@ let initialState = {
     ]
 };
 
+// dialogsReducer
 const dialogsReducer = (state = initialState, action) => {
 switch (action.type) { 
     case UPDATE_NEW_MESSAGE_BODY:
@@ -31,6 +34,6 @@ switch (action.type) {
         };
     default: return state;
     }
-}
+};
 
 export default dialogsReducer;
