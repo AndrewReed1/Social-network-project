@@ -81,7 +81,7 @@ export const setUsers = (users) => ({type: SET_USERS, users});
 export const setCurrentPage = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage});
 export const setTotalUsersCount = (totalUsersCount) => ({type: SET_TOTAL_USERS_COUNT, count: totalUsersCount});
 export const toggleIsFeatching = (isFeatching) => ({type: TOGGLE_IS_FEATCHING, isFeatching });
-export const toggleFollowingProgress = (isFeatching, userId) => ({type: TOGGLE_IS_FOLLOWING_PROGRESS, isFeatching, userId });
+export const toggleFollowingProgress = (isFeatching, userId) => ({type: TOGGLE_IS_FOLLOWING_PROGRESS, isFeatching, userId});
 
 // Redux-thunk
 export const getUsers = (page, pageSize) => {

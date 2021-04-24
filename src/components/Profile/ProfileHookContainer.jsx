@@ -7,7 +7,6 @@ import { withAuthRedirect } from '../../HOC/withAuthRedirect';
 import { compose } from 'redux';
 
 const ProfileHookContainer = (props) => {
-
     useEffect(() => {
         let userId = props.match.params.userId;
         if (!userId) {
