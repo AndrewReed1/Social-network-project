@@ -8,7 +8,8 @@ import Post from './Post/Post';
 const maxLength20 = maxLengthCreator(20);
 
 const MyPosts = (props) => {
-    let postsItem = props.posts.map( p => <Post isLike={p.isLike} fullName={props.login} message={p.message} like={p.likesCount}/> );
+    let userName = props.profile;
+    let postsItem = props.posts.map( p => <Post userName={userName} myName={props.login} message={p.message} like={p.likesCount}/> );
 
     let onAddPost = (values) => {
         props.addPost(values.newPostText);

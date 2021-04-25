@@ -1,9 +1,3 @@
-import dialogsReducer from "./dialogs-reducer";
-import profileReducer from "./profile-reducer";
-import sidebarReducer from "./sidebar-reducer";
-
-const SEND_MESSAGE = 'SEND_MESSAGE';
-
 let store = {
     _state: {
         profilePage: {
@@ -12,7 +6,7 @@ let store = {
                 {id: 2, message: 'This is my first post', likesCount: 13},
                 {id: 3, message: 'React the way of samurai', likesCount: 14}
             ],
-            newPostText: 'lol' //  Текст в полеввода MyPosts
+            newPostText: 'lol'
         },
         dialogsPage: {
             dialogs: [
@@ -48,9 +42,6 @@ let store = {
 
         this._callSubscriber(this._state);
     }
-}
-
-// action creator для Dialogs
-export const sendMessageCreator = (newMessageBody) => ({type: SEND_MESSAGE, newMessageBody});
+};
 
 export default store;

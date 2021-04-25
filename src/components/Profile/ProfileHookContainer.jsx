@@ -14,7 +14,7 @@ const ProfileHookContainer = (props) => {
         };
         props.getUserProfile(userId);
         props.getStatus(userId);
-    }, [props.match.params.userId, props.authorizedUserId]);
+    }, [props.match.params.userId]);
 
     return (
         <Profile {...props}
