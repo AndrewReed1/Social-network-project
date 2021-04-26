@@ -24,10 +24,10 @@ const ProfileHooksStatus = (props) => {
     }
 
     return (
-        <div className={s.span} >
+        <div className={props.isOwner ? s.span: s.span2} >
             {!editMode &&
                 <div>
-                    <span onClick={ props.isOwner ? activateEditMode : null } className={s.mainSpan}>{props.status || 'Set Status'}</span>
+                    <span onClick={ props.isOwner ? activateEditMode : null } className={props.isOwner ? '': s.mainSpan}>{props.status || 'Set Status'}</span>
                 </div>
             }
             {editMode &&

@@ -29,8 +29,8 @@ class App extends React.Component {
 
     return (
         <div className='full-screen'>
-          <div className='app-wrapper'>
             <HeaderContainer/>
+          <div className='app-wrapper'>
             <Nav/>
             <div className='content'>
               <div className='content-wrapper'>
