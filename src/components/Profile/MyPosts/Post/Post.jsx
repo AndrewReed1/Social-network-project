@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import s from './Post.module.css';
 import userPhoto from '../../../../assets/img/user-logo.png';
 
@@ -10,7 +10,7 @@ const Post = (props) => {
                     <img src={userPhoto} />
                 </div>
                 <div className={s.info}>
-                    <div className={s.name}><b>{props.myName}</b></div>
+                    <div className={s.name}><b>{'UserName'}</b></div>
                     <div>{props.message}</div>
                 </div>
             </div>
