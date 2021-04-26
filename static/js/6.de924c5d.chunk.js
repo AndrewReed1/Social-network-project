@@ -1,0 +1,2 @@
+(this.webpackJsonpapp01=this.webpackJsonpapp01||[]).push([[6],{297:function(t,s,e){t.exports={settings_wrapper:"Settings_settings_wrapper__b9e1F"}},301:function(t,s,e){"use strict";e.r(s);e(1);var n=e(297),p=e.n(n),i=e(0);s.default=function(){return Object(i.jsx)("div",{className:p.a.settings_wrapper,children:"Settings"})}}}]);
+//# sourceMappingURL=6.de924c5d.chunk.js.map

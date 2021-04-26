@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/News/News.module.css"],"names":[],"mappings":"AAAA,0BACI,gBAAiB,CACjB,qBAAuB,CACvB,YAAa,CACb,iBACJ","file":"5.43e620d9.chunk.css","sourcesContent":[".news_wrapper {\n    min-height: 600px;\n    background-color: white;\n    padding: 15px;\n    border-radius: 5px;\n}"]}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/Settings/Settings.module.css"],"names":[],"mappings":"AAAA,kCACI,gBAAiB,CACjB,qBAAuB,CACvB,YAAa,CACb,iBACJ","file":"6.7b6bd2fe.chunk.css","sourcesContent":[".settings_wrapper {\n    min-height: 600px;\n    background-color: white;\n    padding: 15px;\n    border-radius: 5px;\n}"]}
