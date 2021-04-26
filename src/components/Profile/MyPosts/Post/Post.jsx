@@ -10,7 +10,7 @@ const Post = (props) => {
                     <img src={userPhoto} />
                 </div>
                 <div className={s.info}>
-                    <div className={s.name}><b>{'UserName'}</b></div>
+                    <div className={s.name}><b>{'AndreBresso'}</b></div>
                     <div>{props.message}</div>
                 </div>
             </div>
