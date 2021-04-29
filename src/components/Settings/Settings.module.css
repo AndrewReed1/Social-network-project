@@ -3,4 +3,73 @@
     background-color: white;
     padding: 15px;
     border-radius: 5px;
+    display: flex;
+}
+
+.button {
+    border: none;
+    padding: 8px 30px;
+    border-radius: 5px;
+    background-color: rgb(201, 201, 201);
+    outline: none;
+    font-family: 'Zen Dots', cursive;
+    margin-top: 15px;
+}
+
+.button:hover {
+    color: red;
+    background-color: rgb(175, 175, 175);
+}
+
+.header{
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.img {
+    width: 350px;
+    height: 450px;
+    padding-left: 10px;
+}
+
+.formBlock {
+    display: flex;
+}
+
+.formItem {
+    margin-bottom: 10px;
+    border-bottom: 2px solid rgb(237,238,240);
+}
+
+.checkBox {
+   color: rgb(165, 165, 165);
+}
+
+.check {
+    display: flex;
+}
+
+.field {
+    border: none;
+    outline: none;
+    width: 130px;
+}
+
+.textArea {
+    width: 100%;
+    height: 50px;
+    font-family: 'Zen Dots', cursive;
+}
+
+.formItemTextArea {
+    margin-bottom: 10px;
+}
+
+.name {
+    color: blue;
+}
+
+.name_2 {
+    color: blue;
+    margin-bottom: 7px;
 }

@@ -14,12 +14,12 @@ let reducers = combineReducers({
     sideBar: sidebarReducer,
     usersPage: usersReducer,
     auth: authReducer,
-    app: appReducer,
-    form: formReducer
+    form: formReducer,
+    app: appReducer
 });
 
 let store = createStore(reducers, applyMiddleware(thunkMiddleware));
 
-window.state = store.getState();
+window.store = store;
 
 export default store;

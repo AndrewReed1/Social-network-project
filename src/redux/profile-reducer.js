@@ -86,4 +86,8 @@ export const savePhoto = (file) => (dispatch) => {
     });
 };
 
+export const saveProfile = (profile) => (dispatch) => {
+    profileAPI.saveProfile(profile).then(response => { })
+};
+
 export default profileReducer;

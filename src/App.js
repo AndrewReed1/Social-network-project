@@ -10,11 +10,11 @@ import { compose } from 'redux';
 import { initializeApp } from './redux/app-reducer';
 import Preloader from './components/common/Preloader/Preloader';
 import ProfileHookContainer from './components/Profile/ProfileHookContainer';
+import Settings from './components/Settings/Settings'
 
 // Lazy-loaded components
 const News = React.lazy(() => import('./components/News/News'));
 const Music = React.lazy(() => import('./components/Music/Music'));
-const Setting = React.lazy(() => import('./components/Settings/Settings'));
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'));
 
 class App extends React.Component {
@@ -28,23 +28,23 @@ class App extends React.Component {
     }
 
     return (
-        <div className='full-screen'>
-            <HeaderContainer/>
-          <div className='app-wrapper'>
-            <Nav/>
-            <div className='content'>
-              <div className='content-wrapper'>
-                <Route path='/profile/:userId?' render={() => <ProfileHookContainer />} />
-                <Route path='/dialogs' render={() => { return <React.Suspense fallback={<div>Loading dialogs...</div>}><DialogsContainer/></React.Suspense>}} />
-                <Route path='/users' render={() => <UsersContainer />} />
-                <Route path='/news' render={() => { return <React.Suspense fallback={<div>Loading news...</div>}><News/></React.Suspense>}}/>
-                <Route path='/music' render={() => { return <React.Suspense fallback={<div>Loading music...</div>}><Music/></React.Suspense>}}/>
-                <Route path='/settings' render={() => { return <React.Suspense fallback={<div>Loading settings...</div>}><Setting/></React.Suspense>}}/>
-                <Route path='/login' render={() => <Login/>} />
-              </div>
+      <div className='full-screen'>
+        <HeaderContainer />
+        <div className='app-wrapper'>
+          <Nav />
+          <div className='content'>
+            <div className='content-wrapper'>
+              <Route path='/profile/:userId?' render={() => <ProfileHookContainer />} />
+              <Route path='/dialogs' render={() => { return <React.Suspense fallback={<div>Loading dialogs...</div>}><DialogsContainer /></React.Suspense> }} />
+              <Route path='/users' render={() => <UsersContainer />} />
+              <Route path='/news' render={() => { return <React.Suspense fallback={<div>Loading news...</div>}><News /></React.Suspense> }} />
+              <Route path='/music' render={() => { return <React.Suspense fallback={<div>Loading music...</div>}><Music /></React.Suspense> }} />
+              <Route path='/settings' render={() => <Settings />} />
+              <Route path='/login' render={() => <Login />} />
             </div>
           </div>
         </div>
+      </div>
     )
   }
 };
@@ -53,4 +53,4 @@ const mapStateToProps = (state) => ({
   initialized: state.app.initialized
 });
 
-export default compose(withRouter, connect(mapStateToProps, { initializeApp }))(App);
+export default compose(withRouter, connect(mapStateToProps, { initializeApp } ))(App);

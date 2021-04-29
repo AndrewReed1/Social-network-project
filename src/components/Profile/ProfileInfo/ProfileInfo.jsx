@@ -8,6 +8,7 @@ const ProfileInfo = (props) => {
     if (!props.profile) {
         return <Preloader />
     };
+    let aboutMe = props.profile.aboutMe
     let FaceBookLink = props.profile.contacts.facebook;
     let GitHubLink = props.profile.contacts.github;
     let InstagramLink = props.profile.contacts.instagram;
@@ -30,11 +31,14 @@ const ProfileInfo = (props) => {
                 <div className={s.person_discription}>
                     <ProfileStatus isOwner={props.isOwner} status={props.status} updateStatus={props.updateStatus} />
                     <div className={s.discription}>
-                        <div>{'Job Status:' + ' '}{props.profile.lookingForAJob ? 'looking for a job' : 'not looking for a job'}</div>
-                        <div>{'Facebook:' + ' '}{FaceBookLink ? FaceBookLink : 'no information'}</div>
-                        <div>{'GitHub:' + ' '}{GitHubLink ? GitHubLink : 'no information'}</div>
-                        <div>{'Instagram:' + ' '}{InstagramLink ? InstagramLink : 'no information'}</div>
-                        <div>{'VK:' + ' '}{VkLink ? VkLink : 'no information'}</div>
+                        <div><b>Job Status: </b>{props.profile.lookingForAJob ? 'Yes' : 'No'}</div>
+                        {props.profile.lookingForAJob && 
+                        <div><b>My professional skills: </b>{props.profile.lookingForAJobDiscription}</div>}
+                        <div><b>About Me: </b>{aboutMe ? aboutMe : 'no information'}</div>
+                        <div><b>Facebook: </b>{FaceBookLink ? FaceBookLink : 'no information'}</div>
+                        <div><b>GitHub: </b>{GitHubLink ? GitHubLink : 'no information'}</div>
+                        <div><b>Instagram: </b>{InstagramLink ? InstagramLink : 'no information'}</div>
+                        <div><b>VK: </b>{VkLink ? VkLink : 'no information'}</div>
                     </div>
                     <div>{props.isOwner && <input className={s.uploadPhoto} onChange={ onMainPhotoSelected } type={'file'}/>}</div>
                 </div>
