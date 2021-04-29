@@ -1,0 +1,2 @@
+(this.webpackJsonpapp01=this.webpackJsonpapp01||[]).push([[5],{296:function(e,p,s){e.exports={news_wrapper:"News_news_wrapper__3H1gv"}},299:function(e,p,s){"use strict";s.r(p);s(1);var n=s(296),r=s.n(n),a=s(0);p.default=function(){return Object(a.jsx)("div",{className:r.a.news_wrapper,children:"News"})}}}]);
+//# sourceMappingURL=5.07585a06.chunk.js.map
