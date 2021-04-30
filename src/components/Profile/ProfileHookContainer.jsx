@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
 import Profile from './Profile';
 import { connect } from 'react-redux';
-import { getUserProfile, getStatus, updateStatus, savePhoto } from '../../redux/profile-reducer';
+import { getUserProfile, getStatus, updateStatus, savePhoto, addPostActionCreator } from '../../redux/profile-reducer';
 import { withRouter } from 'react-router';
 import { withAuthRedirect } from '../../HOC/withAuthRedirect';
 import { compose } from 'redux';
-import { addPostActionCreator } from '../../redux/profile-reducer';
 
 const ProfileHookContainer = (props) => {
     useEffect(() => {
@@ -26,7 +25,7 @@ const ProfileHookContainer = (props) => {
             updateStatus={props.updateStatus}
             posts={props.posts}
             newPostText={props.newPostText}
-            addPost={props.addPostActionCreator} />
+            addPost={props.addPostActionCreator}/>
     )
 };
 
@@ -40,7 +39,7 @@ let mapStateToProps = (state) => ({
 });
 
 export default compose(
-    connect(mapStateToProps, {getUserProfile, getStatus, updateStatus, savePhoto, addPostActionCreator}),
+    connect(mapStateToProps, {getUserProfile, getStatus, updateStatus, savePhoto, addPostActionCreator }),
     withRouter,
-    withAuthRedirect,
+    withAuthRedirect
 )(ProfileHookContainer);

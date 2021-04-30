@@ -40,7 +40,7 @@ const ProfileInfo = (props) => {
                         <div><b>Instagram: </b>{InstagramLink ? InstagramLink : 'no information'}</div>
                         <div><b>VK: </b>{VkLink ? VkLink : 'no information'}</div>
                     </div>
-                    <div>{props.isOwner && <input className={s.uploadPhoto} onChange={ onMainPhotoSelected } type={'file'}/>}</div>
+                    <div><b>{'Upload photo: '}</b>{props.isOwner && <input className={s.uploadPhoto} onChange={ onMainPhotoSelected } type={'file'}/>}</div>
                 </div>
             </div>
         </div>

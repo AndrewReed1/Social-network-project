@@ -10,15 +10,16 @@
     border: none;
     padding: 8px 30px;
     border-radius: 5px;
-    background-color: rgb(201, 201, 201);
+    color: rgb(59, 59, 59);
+    background-color: rgb(228, 228, 228);
     outline: none;
     font-family: 'Zen Dots', cursive;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .button:hover {
-    color: red;
-    background-color: rgb(175, 175, 175);
+    color: rgb(0, 0, 0);
+    background-color: rgb(201, 201, 201);
 }
 
 .header{
@@ -28,7 +29,7 @@
 
 .img {
     width: 350px;
-    height: 450px;
+    height: 395px;
     padding-left: 10px;
 }
 
@@ -63,13 +64,4 @@
 
 .formItemTextArea {
     margin-bottom: 10px;
-}
-
-.name {
-    color: blue;
-}
-
-.name_2 {
-    color: blue;
-    margin-bottom: 7px;
 }

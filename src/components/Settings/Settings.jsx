@@ -52,10 +52,9 @@ const UsersDataFormik = (props) => {
 
 const UsersDataReduxFormik = reduxForm({form: 'DataFormik'}) (UsersDataFormik);
 
-const Settings = (props) => {
+const Settings = () => {
 
     const onSubmitData = (formData) => {
-        debugger
         saveProfile(formData);
     };
 

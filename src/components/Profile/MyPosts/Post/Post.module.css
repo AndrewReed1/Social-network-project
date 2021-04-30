@@ -19,11 +19,12 @@
     margin-top: 5px;
     padding-top: 7px;
     border-top: 2px solid rgb(237,238,240);
+    display: flex;
 }
 
 .info_wrapper {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
 }
 
 .info {
@@ -35,4 +36,28 @@
 
 .name {
     font-size: 15px;
+}
+
+.postData {
+    display: flex;
+}
+
+.heartLike {
+    margin-right: 5px;
+}
+
+.button {
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    color: rgb(59, 59, 59);
+    background-color: rgb(228, 228, 228);
+    outline: none;
+    font-family: 'Zen Dots', cursive;
+    font-size: 12px;
+}
+
+.button:hover {
+    color: red;
+    background-color: rgb(201, 201, 201);
 }
